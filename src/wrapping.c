@@ -7,5 +7,5 @@ int main() {
 	denom *= 2;
 	printf("denom = %"PRIu64"\n", denom);
 	if (denom == 0)
-		printf("WHAT?!?");
+		printf("WHAT?!?\n");
 }
