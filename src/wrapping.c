@@ -1,14 +1,11 @@
 #include <stdio.h>
-#include <limits.h>
-
-#define INITIAL (UINT_MAX / 8 + 2)
+#include <inttypes.h>
 
 int main() {
-	unsigned int i = INITIAL;
-
-	while (i >= INITIAL) {
-		printf("%u >= %u\n", i, INITIAL);
-		i *= 2;
-	}
-	printf("%u < %u\n", i, INITIAL);
+	uint64_t denom = UINT64_MAX/2+1;
+	printf("denom = %"PRIu64"\n", denom);
+	denom *= 2;
+	printf("denom = %"PRIu64"\n", denom);
+	if (denom == 0)
+		printf("WHAT?!?\n");
 }
